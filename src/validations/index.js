@@ -1,0 +1,1 @@
+export { default as CustomValidation } from './custom.validation';
