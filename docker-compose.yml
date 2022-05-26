@@ -1,0 +1,22 @@
+version: '3'
+
+services:
+  node-app:
+    build: .
+    image: ${REGISTRY_NAME:-registry.salar.click}/${IMAGE_NAME:-node-app}:${BUILD_VERSION:-latest}
+    restart: always
+    ports:
+      - '127.0.0.1:3010:3010'
+    networks:
+      - node-network
+
+  mongodb:
+    image: mongo:4.2.1-bionic
+    ports:
+      - '127.0.0.1:27017:27017'
+    networks:
+      - node-network
+
+networks:
+  node-network:
+

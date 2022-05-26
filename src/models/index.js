@@ -1,0 +1,1 @@
+export { default as MiscModel } from './misc.model';

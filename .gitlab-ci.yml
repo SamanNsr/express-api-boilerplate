@@ -1,0 +1,4 @@
+include:
+  - project: 'denxa/ci'
+    ref: master
+    file: 'aws-k8s-back-01.yml'
